@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MagisterShop.Domain\MagisterShop.Domain.csproj" />
+    <ProjectReference Include="..\MagisterShop.Infraastructure\MagisterShop.Infraastructure.csproj" />
+  </ItemGroup>
+
 </Project>
