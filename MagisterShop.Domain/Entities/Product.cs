@@ -6,20 +6,32 @@ namespace MagisterShop.Domain.Entities
 {
     public class Product
     {
+        public Guid Id { get; protected set; }
         public string Title { get; protected set; }
         public string Description { get; protected set; }
         public int Status { get; protected set; }
         public DateTime DateOfAddition { get; protected set; }
         public virtual User User { get; protected set; }
+        public virtual Rating Rating { get; protected set; }
+        public ICollection<Comment> Comments { get; protected set; }
 
         protected Product() { }
 
-        public Product(User user, string title, string description, int status = 1)
+        public Product(User user, string title, string description, Rating rating, int status = 1)
         {
+            Id = Guid.NewGuid();
             User = user;
+            Rating = rating;
+            Comments = new HashSet<Comment>();
+            DateOfAddition = DateTime.Now;
             SetTitle(title);
             SetDescription(description);
             SetStatus(status);
+        }
+
+        public void AddComment(Comment comment)
+        {
+            Comments.Add(comment);
         }
 
         public void SetTitle(string title)
