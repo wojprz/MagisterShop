@@ -9,6 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MagisterShop.Domain\MagisterShop.Domain.csproj" />
     <ProjectReference Include="..\MagisterShop.Infraastructure\MagisterShop.Infraastructure.csproj" />
   </ItemGroup>
