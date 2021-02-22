@@ -37,7 +37,7 @@ namespace MagisterShop.Infraastructure.Services
             }
 
             var rating = _ratingRepository.CreateRating();
-            var user = _userRepository.GetAsync(userId);
+            var user = await _userRepository.GetAsync(userId);
 
             if (user == null)
             {

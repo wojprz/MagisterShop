@@ -5,17 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MagisterShop.Domain\MagisterShop.Domain.csproj" />
-    <ProjectReference Include="..\MagisterShop.Infraastructure\MagisterShop.Infraastructure.csproj" />
+    <ProjectReference Include="..\MagisterShop.Infraastructure\MagisterShop.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

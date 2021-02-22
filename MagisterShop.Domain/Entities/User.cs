@@ -24,9 +24,9 @@ namespace MagisterShop.Domain.Entities
 
         protected User() { }
 
-        public User(Guid id, string email, string name, string surname, string login, string password, IEncrypter encrypter, int status = 1)
+        public User(string email, string name, string surname, string login, string password, IEncrypter encrypter, int status = 1)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             SetEmail(email);
             SetName(name);
             SetSurname(surname);

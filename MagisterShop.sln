@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagisterShop", "MagisterShop\MagisterShop.csproj", "{FD13A82F-9E1F-44F0-B551-227E3C81114B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagisterShop.Domain", "MagisterShop.Domain\MagisterShop.Domain.csproj", "{53AB9889-C7E1-486D-9E37-FEA61CE92FAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagisterShop.Domain", "MagisterShop.Domain\MagisterShop.Domain.csproj", "{53AB9889-C7E1-486D-9E37-FEA61CE92FAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagisterShop.Infraastructure", "MagisterShop.Infraastructure\MagisterShop.Infraastructure.csproj", "{3D115849-55B0-4072-ADC7-43A30CD4CFA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagisterShop.Infrastructure", "MagisterShop.Infraastructure\MagisterShop.Infrastructure.csproj", "{3D115849-55B0-4072-ADC7-43A30CD4CFA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

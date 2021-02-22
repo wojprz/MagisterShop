@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MagisterShop.Domain.Entities;
 using MagisterShop.Infraastructure.DTOs;
+using MagisterShop.Infraastructure.Mappers;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using System;
@@ -9,7 +10,7 @@ using System.Text;
 
 namespace MagisterShop.Infraastructure
 {
-    public class AutoMapperConfig : IAutomaperConfig
+    public class AutoMapperConfig : IAutoMapperConfig
     {
         private readonly IOptions<HostOptions> _settings;
 
