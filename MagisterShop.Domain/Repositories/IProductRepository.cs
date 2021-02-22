@@ -10,6 +10,7 @@ namespace MagisterShop.Domain.Repositories
     {
         Task<Product> GetAsync(Guid id);
         Task<IEnumerable<Product>> GetAllAsync();
+        Task<IEnumerable<Product>> GetAllAsync(int page, int count);
         Task<IEnumerable<Product>> GetAllWithNameAsync(string title);
         Task<IEnumerable<Product>> GetAllUserProductsAsync(Guid userId);
         Task RemoveAsync(Guid id);

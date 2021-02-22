@@ -8,6 +8,7 @@ namespace MagisterShop.Infraastructure.DTOs
     {
         public string Title { get; set; }
         public string Description { get; set; }
+        public float Price { get; set; }
         public DateTime DateOfAddition { get; set; }
         public UserDTO User { get; set; }
         public RatingDTO Rating { get; set; }

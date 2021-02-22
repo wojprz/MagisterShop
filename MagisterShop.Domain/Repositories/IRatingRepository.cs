@@ -8,7 +8,8 @@ namespace MagisterShop.Domain.Repositories
 {
     public interface IRatingRepository
     {
-        Task AddAsync(Guid productId);
+        Task AddAsync(Rating rating);
+        Rating CreateRating();
         Task<IEnumerable<Rating>> GetAllAsync();
         Task AddVoteAsync(Product product, User user, int rating);
         Task<Rating> GetRatingAsync(Guid productId);

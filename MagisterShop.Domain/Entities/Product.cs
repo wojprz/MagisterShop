@@ -10,6 +10,7 @@ namespace MagisterShop.Domain.Entities
         public string Title { get; protected set; }
         public string Description { get; protected set; }
         public int Status { get; protected set; }
+        public float Price { get; protected set; }
         public DateTime DateOfAddition { get; protected set; }
         public virtual User User { get; protected set; }
         public virtual Rating Rating { get; protected set; }

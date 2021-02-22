@@ -18,10 +18,15 @@ namespace MagisterShop.Domain.Repositories
         {
             _entities = entities;
         }
-
-        public async Task AddAsync(Guid productId)
+        
+        public Rating CreateRating()
         {
-            var rating = new Rating(productId);
+            var rating = new Rating();
+            return rating;
+        }
+
+        public async Task AddAsync(Rating rating)
+        {
             await _entities.AddAsync(rating);
             await _entities.SaveChangesAsync();
         }
@@ -36,7 +41,7 @@ namespace MagisterShop.Domain.Repositories
 
         public async Task<Rating> GetRatingAsync(Guid productId)
         {
-            var rating = await GetAsync();
+            var rating = await GetAllAsync();
             return rating.SingleOrDefault(x => x.ProductId == productId);
 
         }

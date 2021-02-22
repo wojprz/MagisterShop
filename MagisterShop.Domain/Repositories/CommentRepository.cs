@@ -26,11 +26,11 @@ namespace MagisterShop.Domain.Repositories
 
         public async Task<Comment> GetAsync(Guid id) => await _entities.Comments.SingleOrDefaultAsync(x => x.Id == id);
 
-        public async Task<IEnumerable<Comment>> GetAllProductComments(Guid productId) => await _entities.Comments.Where(x => x.ProductId == productId).ToListAsync();
+        public async Task<IEnumerable<Comment>> GetAllProductComments(Guid productId, int page, int count) => await _entities.Comments.Where(x => x.ProductId == productId).Skip((page - 1) * count).Take(count).ToListAsync();
 
-        public async Task<IEnumerable<Comment>> GetAllUserComments(Guid userId) => await _entities.Comments.Where(x => x.User.Id == userId).ToListAsync();
+        public async Task<IEnumerable<Comment>> GetAllUserComments(Guid userId, int page, int count) => await _entities.Comments.Where(x => x.User.Id == userId).Skip((page - 1) * count).Take(count).ToListAsync();
 
-        public async Task<IEnumerable<Comment>> GetAllUserComments(string login) => await _entities.Comments.Where(x => x.User.Login == login).ToListAsync();
+        public async Task<IEnumerable<Comment>> GetAllUserComments(string login, int page, int count) => await _entities.Comments.Where(x => x.User.Login == login).Skip((page - 1) * count).Take(count).ToListAsync();
 
         public async Task RemoveAsync(Guid commentId)
         {
